@@ -15,8 +15,9 @@ A project where you interact with an ATM.
 
   - IDE: Intellij IDEA
   - Compiler: Javac
+  - Unit Test: JUnit 5.8.1
   - Bytecode: 1.8
-  - SDK: 11.0.12.7
+  - SDK: 11.0.12
   - Archetype: Maven Archetype Simple - Version: 1.4
 
 # Error Handling
