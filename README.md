@@ -3,7 +3,7 @@
 A project where you interact with an ATM. 
 
 # Tutorial
-  - First navigate to src/main/java/au/com/nuvento/atm and there is a java class called [ATM](https://github.com/HaydenMcKenzie/exam_mckenzie_hayden_java_2023_02/blob/main/src/main/java/au/com/nuvento/atm/ATM.java) in there. When you run that:
+  - First navigate to [src/main/java/au/com/nuvento/atm](https://github.com/HaydenMcKenzie/exam_mckenzie_hayden_java_2023_02/tree/main/src/main/java/au/com/nuvento/atm) and there is a java class called [ATM](https://github.com/HaydenMcKenzie/exam_mckenzie_hayden_java_2023_02/blob/main/src/main/java/au/com/nuvento/atm/ATM.java) in there. When you run that:
   1. You are prompted for a user ID - 001, 002 or 003.
   2. Then it displays options including: 1. for Deposit, 2. for Withdraw, 3. for Balance or q for Quit.
   3. You are given the accounts related to the user ID from before and you need to choose which account to interact with - Accounts have a number you need to enter to interact with it.
