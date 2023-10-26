@@ -1,0 +1,86 @@
+Setup
+    READ in files
+        OpeningAccountsData.txt
+        UserInfo.txt
+
+    CREATE BankAccounts
+        from OpeningAccounts.txt
+    CREATE Clients
+        from UserInfo.txt
+
+Interact with Client
+    PROMPT User for User ID
+    VALIDATE User ID
+
+    WHILE User hasn't entered 'q'
+        PROMPT for account number
+        VALIDATE account number
+        IF valid account number
+            DISPLAY with Welcome message
+            DISPLAY option
+                1. For Deposit
+                2. For Withdrawal
+                3. For Balance
+                q. To Quit
+
+            READ user option
+            VALIDATE if user option is numeric and valid
+            IF numeric and valid
+                DISPLAY client bank accounts
+                IF user id is 001 or 002
+                    DISPLAY account option
+                        1. for account type (account number)
+                        2. for account type (account number)
+                ELSE
+                    DISPLAY account option
+                        1. for account type (account number)
+                END IF
+            ELSE IF option is q
+                DISPLAY goodbye message
+                DISPLAY Account balances for all accounts
+            ELSE
+                Show unknown user message
+                Restart - prompt user for user id
+            END IF
+
+            READ user account option
+            VALIDATE if user account option is correct
+            IF correct
+                supply account information
+                IF option is 1 or 2
+                    DISPLAY prompt to enter amount
+                    IF amount is numeric
+                        IF option is 2
+                            IF entered amount is greater than the balance
+                                WRITE Error message
+                                Restart - back to User ID
+                            ELSE
+                                show successful withdrawal message
+                                REWRTIE starting balance with new balance
+                        ELSE IF option is 1
+                            DISPLAY new balance of account
+                            REWRTIE starting balance with new balance
+                    ELSE
+                        WRITE Error message
+                        Restart - back to User ID
+                ELSE IF option is 3
+                    DISPLAY balance of account selected
+                ELSE IF option is q
+                    DISPLAY goodbye message
+                    DISPLAY Account balances for all accounts
+                ELSE
+                    WRITE Error message
+                    Restart - back to User ID
+            ELSE
+                WRITE Error message
+                Restart - back to User ID
+        ELSE IF option is q
+            DISPLAY goodbye message
+            DISPLAY Account balances for all accounts
+        ELSE
+            Show unknown user message
+            Restart - prompt user for user id
+        END IF
+    END WHILE
+
+Exit
