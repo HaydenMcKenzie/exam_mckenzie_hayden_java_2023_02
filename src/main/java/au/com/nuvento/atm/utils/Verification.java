@@ -97,7 +97,7 @@ public class Verification {
      * @param newBal is a variable from userInteraction() from ATM. It is to verify weather the New Balance if less than 0. If so, recall application
      * @throws FileNotFoundException Thrown if file not in path
      */
-    public static String fourthInteraction(String userName, String options, double newBal, double userAmountEntered) throws FileNotFoundException {
+    public String fourthInteraction(String userName, String options, double newBal, double userAmountEntered) throws FileNotFoundException {
         Interactions interactions = new Interactions();
 
         if (newBal < 0) {

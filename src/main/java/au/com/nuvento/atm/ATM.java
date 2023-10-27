@@ -53,7 +53,7 @@ public class ATM
 
         // Showing Balance and enter amount
         interactions.enterInAccount(userName, options, userOption);
-        double userAmount = Integer.parseInt(sc.nextLine());
+        double userAmount = Double.parseDouble(sc.nextLine());
         double newBal = commands.newBalance(userName, options, userOption, userAmount);
         verification.fourthInteraction(userName, options, newBal, userAmount);
         System.out.println("Your new Balance is: " + newBal);

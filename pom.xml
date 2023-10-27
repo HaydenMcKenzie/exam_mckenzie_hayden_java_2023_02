@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>exam_hayden_mckenzie_java_2023_02</name>
-    <description>A simple exam_hayden_mckenzie_java_2023_02.</description>
+    <description>A project where you interact with an ATM.</description>
     <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <url>https://github.com/HaydenMcKenzie/exam_mckenzie_hayden_java_2023_02</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -7,7 +7,7 @@ public enum AtmMessages {
             "3 for Balance\n" +
             "q to Quit"),
     EXIT("Thank you. Exiting ATM"),
-    ERROR("Error your details are incorrect"),;
+    ERROR("Error - Wrong Input. Please Try Again."),;
 
     private String action;
 
