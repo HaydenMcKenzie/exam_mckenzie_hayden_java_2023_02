@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class ClientBuilderTest {
     ReadFile readFile;
@@ -24,12 +23,36 @@ public class ClientBuilderTest {
     }
 
     @Test
-    public void callNameFromUserInfo() throws FileNotFoundException {
+    public void callInfoFromUserInfoForJohn() throws FileNotFoundException {
+        ClientBuilder clientBuilder = new ClientBuilder();
+        HashMap<String, Client> clients = clientBuilder.createUser(userData);
+
+        Client c = clients.get("001");
+        assertEquals(c.getFirstName(), "John");
+        assertEquals(c.getSurname(), "Smith");
+        assertEquals(c.getMobileNumber(), "0403715629");
+        assertEquals(c.getAccountOwnerID(), "001");
+    }
+    @Test
+    public void callInfoFromUserInfoForLeanne() throws FileNotFoundException {
         ClientBuilder clientBuilder = new ClientBuilder();
         HashMap<String, Client> clients = clientBuilder.createUser(userData);
 
         Client c = clients.get("002");
         assertEquals(c.getFirstName(), "Leanne");
-        assertNotEquals(c.getFirstName(), "John");
+        assertEquals(c.getSurname(), "Smith");
+        assertEquals(c.getMobileNumber(), "0403185031");
+        assertEquals(c.getAccountOwnerID(), "002");
+    }
+    @Test
+    public void callInfoFromUserInfoForKim() throws FileNotFoundException {
+        ClientBuilder clientBuilder = new ClientBuilder();
+        HashMap<String, Client> clients = clientBuilder.createUser(userData);
+
+        Client c = clients.get("003");
+        assertEquals(c.getFirstName(), "Kim");
+        assertEquals(c.getSurname(), "Kash");
+        assertEquals(c.getMobileNumber(), "0404993021");
+        assertEquals(c.getAccountOwnerID(), "003");
     }
 }

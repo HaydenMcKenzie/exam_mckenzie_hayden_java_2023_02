@@ -15,6 +15,17 @@ public class BankAccountTest {
     }
 
     @Test
+    void getAccountOwnerID() {
+        assertTrue(bank.getAccountOwnerID().equalsIgnoreCase("004"));
+    }
+
+    @Test
+    void setAccountOwnerID() {
+        bank.setAccountOwnerID("005");
+        assertTrue(bank.getAccountOwnerID().equalsIgnoreCase("005"));
+    }
+
+    @Test
     void getAccountNumber() {
         assertTrue(bank.getAccountNumber().equalsIgnoreCase("1234567"));
     }
@@ -23,5 +34,27 @@ public class BankAccountTest {
     void setAccountNumber() {
         bank.setAccountNumber("0123456");
         assertTrue(bank.getAccountNumber().equalsIgnoreCase("0123456"));
+    }
+
+    @Test
+    void getAccountType() {
+        assertTrue(bank.getAccountType().equalsIgnoreCase("Saving"));
+    }
+
+    @Test
+    void setAccountType() {
+        bank.setAccountType("Cheque");
+        assertTrue(bank.getAccountType().equalsIgnoreCase("Cheque"));
+    }
+
+    @Test
+    void getOpeningBalance() {
+        assertTrue(bank.getOpeningBalance().equalsIgnoreCase("500"));
+    }
+
+    @Test
+    void setOpeningBalance() {
+        bank.setOpeningBalance("600");
+        assertTrue(bank.getOpeningBalance().equalsIgnoreCase("600"));
     }
 }

@@ -46,9 +46,9 @@ public class Commands {
      * @return Opening Balance of selected account
      */
     public String newWriteBal(String userName, String options) {
-        BankBuilder selectAccount = new BankBuilder();
+        BankBuilder account = new BankBuilder();
 
-        String grabAccountInfo = selectAccount.selectAccount(userName, options);
+        String grabAccountInfo = account.selectAccount(userName, options);
         BankAccount b = bankAccount.get(grabAccountInfo);
 
         return b.getOpeningBalance();

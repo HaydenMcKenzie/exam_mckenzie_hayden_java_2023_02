@@ -24,4 +24,37 @@ public class ClientTest {
         client.setFirstName("Daniel");
         assertTrue(client.getFirstName().equalsIgnoreCase("Daniel"));
     }
+
+    @Test
+    void getSurname() {
+        assertTrue(client.getSurname().equalsIgnoreCase("McKenzie"));
+    }
+
+    @Test
+    void setSurname() {
+        client.setSurname("D'Angelo");
+        assertTrue(client.getSurname().equalsIgnoreCase("D'Angelo"));
+    }
+
+    @Test
+    void getMobileNumber() {
+        assertTrue(client.getMobileNumber().equalsIgnoreCase("0412345678"));
+    }
+
+    @Test
+    void setMobileNumber() {
+        client.setMobileNumber("0487654321");
+        assertTrue(client.getMobileNumber().equalsIgnoreCase("0487654321"));
+    }
+
+    @Test
+    void getAccountOwnerID() {
+        assertTrue(client.getAccountOwnerID().equalsIgnoreCase("004"));
+    }
+
+    @Test
+    void setAccountOwnerID() {
+        client.setAccountOwnerID("005");
+        assertTrue(client.getAccountOwnerID().equalsIgnoreCase("005"));
+    }
 }
