@@ -53,13 +53,13 @@ public class ATM
 
         // Showing Balance and enter amount
         interactions.enterInAccount(userName, options, userOption);
-        double userAmount = Double.parseDouble(sc.nextLine());
+        String userAmount = sc.nextLine();
         double newBal = commands.newBalance(userName, options, userOption, userAmount);
         verification.fourthInteraction(userName, options, newBal, userAmount);
-        System.out.println("Your new Balance is: " + newBal);
+        System.out.println("Your new Balance is: " + String.format("%.2f", newBal));
 
         // Write to File
-        writeToFile.reWrite(commands.newWriteBal(userName, options), Double.toString(newBal));
+        writeToFile.reWrite(commands.newWriteBal(userName, options), Double.toString(Double.parseDouble(String.format("%.2f", newBal))));
 
         // Recall
         ATM.setup();

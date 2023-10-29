@@ -97,14 +97,31 @@ public class Verification {
      * @param newBal is a variable from userInteraction() from ATM. It is to verify weather the New Balance if less than 0. If so, recall application
      * @throws FileNotFoundException Thrown if file not in path
      */
-    public String fourthInteraction(String userName, String options, double newBal, double userAmountEntered) throws FileNotFoundException {
+    public String fourthInteraction(String userName, String options, double newBal, String userAmountEntered) throws FileNotFoundException {
         Interactions interactions = new Interactions();
+        AtmMessages errorMessage = AtmMessages.ERROR;
+        double enteredAmount = Double.parseDouble(userAmountEntered);
 
         if (newBal < 0) {
-            System.out.println(interactions.invalidAmountEntered(userName, options, userAmountEntered));
+            System.out.println(interactions.invalidAmountEntered(userName, options, enteredAmount));
             ATM.setup();
             ATM.userInteraction();
         }
-        return userName;
+        if (!(isStringDouble(userAmountEntered))) {
+            System.out.println(errorMessage.getActions());
+            ATM.setup();
+            ATM.userInteraction();
+        }
+
+        return userAmountEntered;
+    }
+
+    public static boolean isStringDouble(String s) {
+        try {
+            Double.parseDouble(s);
+            return true;
+        } catch (NumberFormatException ex) {
+            return false;
+        }
     }
 }
