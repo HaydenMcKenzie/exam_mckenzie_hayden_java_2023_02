@@ -99,16 +99,10 @@ public class Verification {
      */
     public String fourthInteraction(String userName, String options, double newBal, String userAmountEntered) throws FileNotFoundException {
         Interactions interactions = new Interactions();
-        AtmMessages errorMessage = AtmMessages.ERROR;
         double enteredAmount = Double.parseDouble(userAmountEntered);
 
         if (newBal < 0) {
             System.out.println(interactions.invalidAmountEntered(userName, options, enteredAmount));
-            ATM.setup();
-            ATM.userInteraction();
-        }
-        if (!(isStringDouble(userAmountEntered))) {
-            System.out.println(errorMessage.getActions());
             ATM.setup();
             ATM.userInteraction();
         }
