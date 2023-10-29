@@ -25,13 +25,13 @@ public class CommandsTest {
     }
 
     @Test
-    public void testNewBalanceForAdding() {
-        double addResult = c.newBalance("001", "1","1", 10);
+    public void testNewBalanceForAdding() throws FileNotFoundException {
+        double addResult = c.newBalance("001", "1","1", "10");
         assertEquals(addResult, 510.09);
     }
     @Test
-    public void testNewBalanceForMinus() {
-        double minusResult = c.newBalance("001", "1","2", 10);
+    public void testNewBalanceForMinus() throws FileNotFoundException {
+        double minusResult = c.newBalance("001", "1","2", "10");
         assertEquals(minusResult, 490.09);
     }
 
