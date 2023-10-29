@@ -56,7 +56,7 @@ public class ATM
         String userAmount = sc.nextLine();
         double newBal = commands.newBalance(userName, options, userOption, userAmount);
         verification.fourthInteraction(userName, options, newBal, userAmount);
-        System.out.println("Your new Balance is: " + String.format("%.2f", newBal));
+        System.out.println("Your new Balance is: $" + String.format("%.2f", newBal));
 
         // Write to File
         writeToFile.reWrite(commands.newWriteBal(userName, options), Double.toString(Double.parseDouble(String.format("%.2f", newBal))));
