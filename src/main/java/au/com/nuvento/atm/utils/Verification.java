@@ -110,6 +110,11 @@ public class Verification {
         return userAmountEntered;
     }
 
+    /**
+     * Checks if String can be turned into a Double
+     * @param s is user input - Integer, Float or Double
+     * @return true if s can be changed to Integer, Float or Double, else it returns false.
+     */
     public static boolean isStringDouble(String s) {
         try {
             Double.parseDouble(s);
